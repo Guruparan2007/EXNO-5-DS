@@ -17,102 +17,110 @@ STEP 4:Apply the various data visualization tools wherever necessary.
 
 STEP 5:Include Necessary parameters in each functions.
 
-
-
-Name: Guruparan G
-
-Register No:212224220030
-
-
 # Coding and Output:
- python
-python
-height=[10,24,36,37,45]
-names=['one','two','three','four','five']
-c1=['red','blue']
-c2=['b','g']
-plt.bar(names,height,color=c1,width=0.8)
-plt.xlabel("names")
-plt.ylabel("height")
-plt.title("BAR CHART")
-plt.show()
+```
+Name : GURUPARAN G
+Register Number: 212224220030
+```
+    import matplotlib.pyplot as plt
+    x_val = [0,1,2,3,4,5]
+    y_val = [0,1,4,9,16,25]
+    plt.plot(x_val,y_val)
+    plt.show()
+![image](https://github.com/user-attachments/assets/dd37f942-f1b0-4fd4-a8a2-757c622b7c8f)
 
 
-![image](https://github.com/user-attachments/assets/a5b7d71c-62d8-4e56-baa9-fe3d7affe05d)
-python
-x=[2,8,10]
-y=[11,16,9] 
-x2=[3,9,11] 
-y2=[6,15,7]
-plt.bar(x, y,color='yellowgreen') 
-plt.bar(x2, y2, color = 'purple')
-plt.title("Bar graph")
-plt.ylabel('Y axis')
-plt.xlabel('x axis')
-plt.show()
+    import matplotlib.pyplot as plt
+    x = [1,2,3]
+    y = [2,4,1]
+    plt.plot(x,y)
+    plt.xlabel('x-axis')
+    plt.ylabel('y-axis')
+    plt.title('My first graph')
+    plt.show()
+![328087575-7e7559e4-5e09-4bb2-9fb0-8d37d14e6d74](https://github.com/user-attachments/assets/801e284d-c57d-4b05-be09-9c2210d2bac3)
 
+    import matplotlib.pyplot as plt
+    x1 = [1,2,3]
+    y1 = [2,5,3]
+    plt.plot(x1,y1,label = 'line 1')
+    x2 = [1,2,3]
+    y2 = [3,1,6]
+    plt.plot(x2,y2,label = 'line 2')
+    plt.xlabel('x-axis')
+    plt.ylabel('y-axis')
+    plt.title("Two lines on the same graph")
+    plt.legend()
+    plt.show()
 
-![image](https://github.com/user-attachments/assets/38219006-1b9f-43aa-aae5-7c6bc6fc5258)
-python
-ages=[2,5,70,40,30,45,50,45,43,40,44,60,7,13,57,18,90,77,32,21,20,40]
-range=(0, 100)
-bins=10
-plt.hist(ages, bins, range, color='cyan', histtype='bar', rwidth=0.8)
-plt.xlabel('age')
-plt.ylabel('No. of people')
-plt.title('Histogram')
-plt.show()
+![328087646-16e87bfa-27fe-434b-a574-d11ee68cff28](https://github.com/user-attachments/assets/a0f897c1-4127-405b-ac10-98d067940bd1)
 
+    import matplotlib.pyplot as plt
+    import numpy as np
+    x = [1,2,3,4,5]
+    y1 = [10,12,14,16,18]
+    y2 = [5,7,9,11,13]
+    y3 = [2,4,6,8,10]
+    plt.fill_between(x,y1,color = 'blue')
+    plt.fill_between(x,y2,color = 'orange')
+    
+![328087730-ab80fa60-f8b0-4aff-8c1d-eafadb00f6f0](https://github.com/user-attachments/assets/92a3fe37-cc3b-4cf1-9583-436d8a807427)
 
-![image](https://github.com/user-attachments/assets/431ea6bf-d3e2-4848-b797-2b9d4f51516b)
-python
-x = [2,1,6,4,2,4,8,9,4,2,4,10,6,4,5,7,7,3,2,7,5,3,5,9,2,1]
-plt.hist(x, bins=10, color='blue', alpha=0.5)
-plt.show()
+plt.stackplot(x,y1,y2,y3,labels = ['line1','line2','line3'])
+    plt.legend(loc = 'upper left')
+    plt.title('Stacked line charts')
+    plt.xlabel('x-axis')
+    plt.ylabel('y-axis')
+    plt.show()
+    
+![328087826-848cf02d-6463-4b98-aae1-d22ccc233810](https://github.com/user-attachments/assets/fd6db423-232c-4e40-9370-9be8b10222c7)
 
+    import numpy as np
+    import matplotlib.pyplot as plt
+    val = [2,4,7,3]
+    names = ['A','B','C','D']
+    plt.bar(names, val,color = 'purple')
+    plt.show()
+    
+![328089091-1b38caaf-f80c-4524-8233-7d8da40120e5](https://github.com/user-attachments/assets/aaf47b84-31e3-4b64-b7b0-12e22d1d39fd)
 
+    import matplotlib.pyplot as plt
+    import numpy as np
+    ages = [2,6,4,12,13,12,16,18,18,19,26,24,39,34,45,42,54,56,90,56,86,79]
+    range = (0,100)
+    bins = 10
+    plt.hist(ages,bins,range,color='green',histtype='bar',rwidth=0.8)
+    plt.xlabel('age')
+    plt.ylabel('no of people')
+    plt.title('histogram')
+    plt.show()
+    
+ ![328089047-16d3a251-b5bf-4451-9dbf-b43d11d7d5ba](https://github.com/user-attachments/assets/02fb41db-b882-40aa-9134-41ba9f3fc13d)
+ 
+    import matplotlib.pyplot as plt
+    import numpy as np
+    np.random.seed(0)
+    data=np.random.normal(loc=0,scale=1,size=100)
+    data
+![328088984-4d86e55a-fcd9-4f44-9bd2-599e3f8723d0](https://github.com/user-attachments/assets/4e8ce11d-3734-4a2e-bb6d-f6b49719abd2)
+   
 
-![image](https://github.com/user-attachments/assets/99fefd74-333a-463a-ab6f-726ec7cecf15)
-python
-np.random.seed(0)
-data=np.random.normal(loc=0,scale=1,size=100)
-data
+    fig,ax=plt.subplots()
+    ax.boxplot(data)
+    ax.set_xlabel("data")
+    ax.set_ylabel("values")
+    ax.set_title("box plot")
+    
+![image](https://github.com/user-attachments/assets/3a9bd8e9-0386-49dd-bfad-a79acd95094d)
 
-
-![image](https://github.com/user-attachments/assets/03d8540f-60ae-468d-9ae0-f56e0e16f7b9)
-python
-fig,ax=plt.subplots()
-ax.boxplot(data)
-ax.set_title("BOX PLOT")
-ax.set_ylabel("Y-AXIS")
-ax.set_xlabel("X-AXIS")
-
-
-![image](https://github.com/user-attachments/assets/765b76af-0126-460c-b2fa-64c3e8b44570)
-python
-activities = ['eat', 'sleep', 'work', 'play']
-slices=[3, 7, 8, 6]
-colors = ['r', 'y', 'g', 'b']
-plt.pie(slices,labels=activities,colors=colors,startangle=90, 
-        shadow=True,explode=(0,0,0.1,0), radius=1.2, autopct='%1.1f%%')
-plt.legend ()
-plt.show()
-
-
-![image](https://github.com/user-attachments/assets/b56e792a-957c-44bb-b4df-b2648ea9f30a)
-python
-labels=['Python','C++','Ruby','Java']
-sizes=[215, 130, 245, 210] 
-colors=['gold', 'yellowgreen', 'lightcoral', 'lightskyblue'] 
-explode=(0,0.4,0,0.5)
-plt.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%',shadow=True)
-plt.axis('equal')
-plt.show()
-
-
-![image](https://github.com/user-attachments/assets/64d715a0-e308-4fc7-8ef3-b08e1a1c9bf8)
-
-
-
+    import matplotlib.pyplot as plt
+    activities=['eat','sleep','work','play']
+    slices=[3,7,8,6]
+    colors=['r','y','g','b']
+    plt.pie(slices,labels = slices,colors=colors,startangle=90,shadow = True,explode = (0,0,0.1,0),radius=1.2,autopct='%1.1f%%')
+    plt.legend()
+    plt.show()
+![328088117-de3fe53c-40f8-4ba2-9fac-8b4dc36e5010](https://github.com/user-attachments/assets/8f9213b8-3077-44e9-9b0a-cf1e5cd5566d)
+    
 # Result:
- Thus program runs successfully and verified
+ Thus the program is executed successfully.
